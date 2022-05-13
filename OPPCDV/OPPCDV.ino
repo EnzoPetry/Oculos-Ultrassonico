@@ -15,14 +15,12 @@ void setup()
  
 void loop()
 {
-  //Le as informacoes do sensor, em cm e pol
-  float cmMsec, inMsec;
+  //Le as informacoes do sensor
+  float cmMsec;
   long microsec = ultrasonic.timing();
   cmMsec = ultrasonic.convert(microsec, Ultrasonic::CM);
   //Exibe informacoes no serial monitor
   Serial.print("Distancia em cm: ");
   Serial.print(cmMsec);
-  Serial.print(" - Distancia em polegadas: ");
-  Serial.println(inMsec);
   delay(1000);
 }
